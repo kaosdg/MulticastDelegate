@@ -16,8 +16,9 @@ MulticastDelegate is available through [CocoaPods](http://cocoapods.org). To ins
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "MulticastDelegate"
+pod "MulticastDelegate", :git => "https://github.com/kaosdg/MulticastDelegate/blob/master/MulticastDelegate.podspec"
 ```
+(Because I haven't published it to the specs repo)
 
 ## Author
 
