@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		797980941EB91A6E00D44AB0 /* MulticastDelegate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7979808A1EB91A6E00D44AB0 /* MulticastDelegate.framework */; };
-		797980991EB91A6E00D44AB0 /* MulticastDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797980981EB91A6E00D44AB0 /* MulticastDelegateTests.swift */; };
 		7979809B1EB91A6E00D44AB0 /* MulticastDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 7979808D1EB91A6E00D44AB0 /* MulticastDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		797980A51EB91A7E00D44AB0 /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797980A41EB91A7E00D44AB0 /* MulticastDelegate.swift */; };
+		79C1A6D71EC4994E00F31EE7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 79C1A6D31EC4994E00F31EE7 /* Info.plist */; };
+		79C1A6DA1EC49D2F00F31EE7 /* MulticastDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C1A6D61EC4994E00F31EE7 /* MulticastDelegateTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,12 +26,13 @@
 
 /* Begin PBXFileReference section */
 		7979808A1EB91A6E00D44AB0 /* MulticastDelegate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MulticastDelegate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7979808D1EB91A6E00D44AB0 /* MulticastDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MulticastDelegate.h; sourceTree = "<group>"; };
+		7979808D1EB91A6E00D44AB0 /* MulticastDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MulticastDelegate.h; path = ../Sources/MulticastDelegate.h; sourceTree = "<group>"; };
 		7979808E1EB91A6E00D44AB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		797980931EB91A6E00D44AB0 /* MulticastDelegateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MulticastDelegateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		797980981EB91A6E00D44AB0 /* MulticastDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulticastDelegateTests.swift; sourceTree = "<group>"; };
-		7979809A1EB91A6E00D44AB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		797980A41EB91A7E00D44AB0 /* MulticastDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MulticastDelegate.swift; sourceTree = "<group>"; };
+		79C1A6D31EC4994E00F31EE7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79C1A6D41EC4994E00F31EE7 /* LinuxMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinuxMain.swift; sourceTree = "<group>"; };
+		79C1A6D61EC4994E00F31EE7 /* MulticastDelegateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MulticastDelegateTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +57,8 @@
 		797980801EB91A6E00D44AB0 = {
 			isa = PBXGroup;
 			children = (
-				7979808C1EB91A6E00D44AB0 /* MulticastDelegate */,
-				797980971EB91A6E00D44AB0 /* MulticastDelegateTests */,
+				7979808C1EB91A6E00D44AB0 /* Sources */,
+				79C1A6D21EC4994E00F31EE7 /* Tests */,
 				7979808B1EB91A6E00D44AB0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,21 +72,30 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7979808C1EB91A6E00D44AB0 /* MulticastDelegate */ = {
+		7979808C1EB91A6E00D44AB0 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				7979808D1EB91A6E00D44AB0 /* MulticastDelegate.h */,
 				7979808E1EB91A6E00D44AB0 /* Info.plist */,
 				797980A41EB91A7E00D44AB0 /* MulticastDelegate.swift */,
 			);
-			path = MulticastDelegate;
+			path = Sources;
 			sourceTree = "<group>";
 		};
-		797980971EB91A6E00D44AB0 /* MulticastDelegateTests */ = {
+		79C1A6D21EC4994E00F31EE7 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				797980981EB91A6E00D44AB0 /* MulticastDelegateTests.swift */,
-				7979809A1EB91A6E00D44AB0 /* Info.plist */,
+				79C1A6D41EC4994E00F31EE7 /* LinuxMain.swift */,
+				79C1A6D51EC4994E00F31EE7 /* MulticastDelegateTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		79C1A6D51EC4994E00F31EE7 /* MulticastDelegateTests */ = {
+			isa = PBXGroup;
+			children = (
+				79C1A6D31EC4994E00F31EE7 /* Info.plist */,
+				79C1A6D61EC4994E00F31EE7 /* MulticastDelegateTests.swift */,
 			);
 			path = MulticastDelegateTests;
 			sourceTree = "<group>";
@@ -183,6 +194,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79C1A6D71EC4994E00F31EE7 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,7 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				797980991EB91A6E00D44AB0 /* MulticastDelegateTests.swift in Sources */,
+				79C1A6DA1EC49D2F00F31EE7 /* MulticastDelegateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,7 +345,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = MulticastDelegate/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.catigbe.utils.MulticastDelegate;
@@ -353,7 +365,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = MulticastDelegate/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.catigbe.utils.MulticastDelegate;
@@ -367,7 +379,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = MulticastDelegateTests/Info.plist;
+				INFOPLIST_FILE = Tests/MulticastDelegateTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.catigbe.utils.MulticastDelegate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -379,7 +391,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = MulticastDelegateTests/Info.plist;
+				INFOPLIST_FILE = Tests/MulticastDelegateTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.catigbe.utils.MulticastDelegate;
 				PRODUCT_NAME = "$(TARGET_NAME)";

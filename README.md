@@ -1,6 +1,8 @@
 # MulticastDelegate
 
 [![CI Status](http://img.shields.io/travis/kaosdg/MulticastDelegate.svg?style=flat)](https://travis-ci.org/kaosdg/MulticastDelegate)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
 
 ## Example
 

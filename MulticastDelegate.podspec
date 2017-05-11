@@ -32,8 +32,8 @@ MulticastDelegate - A linked list of delegates, also called an invokation list.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = ['MulticastDelegate/*.swift', 'MulticastDelegate/*.h']
+  s.source_files = ['Sources/**/*.swift', 'Sources/**/*.h']
   
-  s.public_header_files = 'MulticastDelegate/**/*.h'
+  s.public_header_files = 'Sources/**/*.h'
 end
 

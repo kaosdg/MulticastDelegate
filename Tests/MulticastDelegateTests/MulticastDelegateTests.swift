@@ -197,3 +197,22 @@ class MulticastDelegateTests: XCTestCase {
 
     }
 }
+
+
+#if os(Linux)
+    extension MulticastDelegateTests {
+        static var allTests : [(String, MulticastDelegateTests -> () throws -> Void)] {
+            return [
+                ("testMethodAddingSingleDelegate", testMethodAddingSingleDelegate),
+                ("testOperatorAddingSingleDelegate", testOperatorAddingSingleDelegate),
+                ("testMethodRemoveSingleDelegate", testMethodRemoveSingleDelegate),
+                ("testOperatorRemoveSingleDelegate", testOperatorRemoveSingleDelegate),
+                ("testRemoveAllDelegates", testRemoveAllDelegates),
+                ("testMethodSingleInvocation", testMethodSingleInvocation),
+                ("testOperatorSingleInvocation", testOperatorSingleInvocation),
+                ("testMultipleInvocation", testMultipleInvocation),
+                ("testMultipleCombinedInvocation", testMultipleCombinedInvocation)
+            ]
+        }
+    }
+#endif
