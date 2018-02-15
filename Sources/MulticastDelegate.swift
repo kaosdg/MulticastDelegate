@@ -17,16 +17,17 @@ import Foundation
  
 */
 public class MulticastDelegate<T> {
+    public typealias Delegate = T
+    private var delegates: NSHashTable<AnyObject>
     
-    private var delegates: NSHashTable<AnyObject> = NSHashTable<AnyObject>.weakObjects()
     
     //MARK: - Initializers
     
     /**
         Initializes the MulticastDelegate
     */
-    public init() {
-        //This space intentionally left blank
+    public init(strongReference: Bool = false) {
+        delegates = strongReference ? NSHashTable<AnyObject>() : NSHashTable<AnyObject>.weakObjects()
     }
     
     //MARK: - Properties
@@ -34,8 +35,8 @@ public class MulticastDelegate<T> {
     /**
         An array of `T` representing all currently added delegates.
     */
-    public var allDelegates: [T] {
-        return delegates.allObjects as! [T]
+    public var allDelegates: [Delegate] {
+        return delegates.allObjects as! [Delegate]
     }
     
     /**
@@ -49,7 +50,7 @@ public class MulticastDelegate<T> {
     
     //MARK: Data accessors
     
-    internal func contains(_ delegate: T) -> Bool {
+    internal func contains(_ delegate: Delegate) -> Bool {
         return delegates.contains(delegate as AnyObject)
     }
     
@@ -60,7 +61,7 @@ public class MulticastDelegate<T> {
         - parameter delegate: The delegate, conforming to `T`, that should be added.
      
     */
-    public func add(_ delegate: T) {
+    public func add(_ delegate: Delegate) {
         delegates.add(delegate as AnyObject)
     }
     
@@ -69,7 +70,7 @@ public class MulticastDelegate<T> {
      
         - parameter delegate: The delegate, conforming to `T`, that should be removed.
     */
-    public func remove(_ delegate: T) {
+    public func remove(_ delegate: Delegate) {
         delegates.remove(delegate as AnyObject)
     }
     
@@ -78,7 +79,7 @@ public class MulticastDelegate<T> {
      - parameter left: The instance of `MulticastDelegate` that `right` will be added to.
      - parameter right: The delegate, conforming to `T`, that will be added o `left`.
      */
-    static public func +=(left: MulticastDelegate<T>, right: T) {
+    static public func +=(left: MulticastDelegate<Delegate>, right: Delegate) {
         left.add(right)
     }
     
@@ -87,7 +88,7 @@ public class MulticastDelegate<T> {
      - parameter left: The instance of `MulticastDelegate` that `right` will be removed from.
      - parameter right: The delegate, conforming to `T`, that will be removed from `right`.
      */
-    static public func -=(left: MulticastDelegate<T>, right: T) {
+    static public func -=(left: MulticastDelegate<Delegate>, right: Delegate) {
         left.remove(right)
     }
 
@@ -96,7 +97,7 @@ public class MulticastDelegate<T> {
     */
     public func removeAll() {
         delegates.removeAllObjects()
-        delegates = NSHashTable<AnyObject>.weakObjects()
+//        delegates = NSHashTable<AnyObject>.weakObjects()
     }
     
     
@@ -106,7 +107,7 @@ public class MulticastDelegate<T> {
         
         - parameter invocation: The closure to execute.
     */
-    public func invoke(_ invocation: (T) -> ()) {
+    public func invoke(_ invocation: (Delegate) -> ()) {
         let _ = allDelegates.map { invocation($0) }
     }
     
@@ -115,7 +116,7 @@ public class MulticastDelegate<T> {
          - parameter left: The instance of `MulticastDelegate` that `right` be executed against.
          - parameter right: The invocation closure to be executed.
     */
-    public static func ~>(left: MulticastDelegate<T>, right: (T) -> ()) {
+    public static func ~>(left: MulticastDelegate<Delegate>, right: (Delegate) -> ()) {
         left.invoke(right)
     }
     
