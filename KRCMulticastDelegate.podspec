@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'KRCMulticastDelegate'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'KRCMulticastDelegate - A linked list of delegates, also called an invokation list.'
 
   s.description      = <<-DESC
