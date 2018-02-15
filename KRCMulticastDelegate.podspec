@@ -18,6 +18,8 @@ KRCMulticastDelegate - A linked list of delegates, also called an invokation lis
 
   s.ios.deployment_target = '8.0'
   s.swift_version = '4.0'
+  s.tvos.deployment_target = '9.0'
+
   s.source_files = ['Sources/**/*.swift', 'Sources/**/*.h']
   
   s.public_header_files = 'Sources/**/*.h'
