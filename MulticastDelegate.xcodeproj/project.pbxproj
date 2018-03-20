@@ -25,6 +25,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		79513ADD206150CA003FDE38 /* KRCMulticastDelegate.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KRCMulticastDelegate.podspec; sourceTree = "<group>"; };
 		7979808A1EB91A6E00D44AB0 /* MulticastDelegate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MulticastDelegate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7979808D1EB91A6E00D44AB0 /* MulticastDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MulticastDelegate.h; path = ../Sources/MulticastDelegate.h; sourceTree = "<group>"; };
 		7979808E1EB91A6E00D44AB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,6 +59,7 @@
 		797980801EB91A6E00D44AB0 = {
 			isa = PBXGroup;
 			children = (
+				79513ADD206150CA003FDE38 /* KRCMulticastDelegate.podspec */,
 				79DE232F1F26511400D23E2C /* README.md */,
 				7979808C1EB91A6E00D44AB0 /* Sources */,
 				79C1A6D21EC4994E00F31EE7 /* Tests */,

@@ -97,7 +97,6 @@ public class MulticastDelegate<T> {
     */
     public func removeAll() {
         delegates.removeAllObjects()
-//        delegates = NSHashTable<AnyObject>.weakObjects()
     }
     
     
