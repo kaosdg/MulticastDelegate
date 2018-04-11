@@ -2,4 +2,5 @@ language: objective-c
 osx_image: xcode9.2
 
 script:
-    - xcodebuild clean && xcodebuild clean build -sdk iphonesimulator -project MulticastDelegate.xcodeproj -scheme MulticastDelegate CODE_SIGNING_REQUIRED=NO
+    - xcodebuild clean && xcodebuild clean build -sdk iphonesimulator -project MulticastDelegate.xcodeproj -scheme MulticastDelegate\ \(iOS\) CODE_SIGNING_REQUIRED=NO
+    - xcodebuild clean && xcodebuild clean build -sdk appletvsimulator -project MulticastDelegate.xcodeproj -scheme MulticastDelegate\ \(tvOS\) CODE_SIGNING_REQUIRED=NO
