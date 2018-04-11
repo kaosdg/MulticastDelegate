@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6DF53B7E207D45EE00EE395D /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797980A41EB91A7E00D44AB0 /* MulticastDelegate.swift */; };
+		6DF53B7F207D45F000EE395D /* MulticastDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 7979808D1EB91A6E00D44AB0 /* MulticastDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		797980941EB91A6E00D44AB0 /* MulticastDelegate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7979808A1EB91A6E00D44AB0 /* MulticastDelegate.framework */; };
 		7979809B1EB91A6E00D44AB0 /* MulticastDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 7979808D1EB91A6E00D44AB0 /* MulticastDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		797980A51EB91A7E00D44AB0 /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797980A41EB91A7E00D44AB0 /* MulticastDelegate.swift */; };
@@ -25,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6DF53B76207D451700EE395D /* MulticastDelegate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MulticastDelegate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79513ADD206150CA003FDE38 /* KRCMulticastDelegate.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KRCMulticastDelegate.podspec; sourceTree = "<group>"; };
 		7979808A1EB91A6E00D44AB0 /* MulticastDelegate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MulticastDelegate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7979808D1EB91A6E00D44AB0 /* MulticastDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MulticastDelegate.h; path = ../Sources/MulticastDelegate.h; sourceTree = "<group>"; };
@@ -38,6 +41,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6DF53B72207D451700EE395D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		797980861EB91A6E00D44AB0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -72,6 +82,7 @@
 			children = (
 				7979808A1EB91A6E00D44AB0 /* MulticastDelegate.framework */,
 				797980931EB91A6E00D44AB0 /* MulticastDelegateTests.xctest */,
+				6DF53B76207D451700EE395D /* MulticastDelegate.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,6 +118,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		6DF53B73207D451700EE395D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DF53B7F207D45F000EE395D /* MulticastDelegate.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		797980871EB91A6E00D44AB0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -118,9 +137,27 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		797980891EB91A6E00D44AB0 /* MulticastDelegate */ = {
+		6DF53B75207D451700EE395D /* MulticastDelegate (tvOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7979809E1EB91A6E00D44AB0 /* Build configuration list for PBXNativeTarget "MulticastDelegate" */;
+			buildConfigurationList = 6DF53B7B207D451700EE395D /* Build configuration list for PBXNativeTarget "MulticastDelegate (tvOS)" */;
+			buildPhases = (
+				6DF53B71207D451700EE395D /* Sources */,
+				6DF53B72207D451700EE395D /* Frameworks */,
+				6DF53B73207D451700EE395D /* Headers */,
+				6DF53B74207D451700EE395D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MulticastDelegate (tvOS)";
+			productName = "MulticastDelegate (tvOS)";
+			productReference = 6DF53B76207D451700EE395D /* MulticastDelegate.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		797980891EB91A6E00D44AB0 /* MulticastDelegate (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7979809E1EB91A6E00D44AB0 /* Build configuration list for PBXNativeTarget "MulticastDelegate (iOS)" */;
 			buildPhases = (
 				797980851EB91A6E00D44AB0 /* Sources */,
 				797980861EB91A6E00D44AB0 /* Frameworks */,
@@ -131,7 +168,7 @@
 			);
 			dependencies = (
 			);
-			name = MulticastDelegate;
+			name = "MulticastDelegate (iOS)";
 			productName = MulticastDelegate;
 			productReference = 7979808A1EB91A6E00D44AB0 /* MulticastDelegate.framework */;
 			productType = "com.apple.product-type.framework";
@@ -164,6 +201,10 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Karl Catigbe";
 				TargetAttributes = {
+					6DF53B75207D451700EE395D = {
+						CreatedOnToolsVersion = 9.3;
+						ProvisioningStyle = Automatic;
+					};
 					797980891EB91A6E00D44AB0 = {
 						CreatedOnToolsVersion = 8.3.2;
 						LastSwiftMigration = 0920;
@@ -188,13 +229,21 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				797980891EB91A6E00D44AB0 /* MulticastDelegate */,
+				797980891EB91A6E00D44AB0 /* MulticastDelegate (iOS) */,
+				6DF53B75207D451700EE395D /* MulticastDelegate (tvOS) */,
 				797980921EB91A6E00D44AB0 /* MulticastDelegateTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		6DF53B74207D451700EE395D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		797980881EB91A6E00D44AB0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -213,6 +262,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6DF53B71207D451700EE395D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DF53B7E207D45EE00EE395D /* MulticastDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		797980851EB91A6E00D44AB0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -234,12 +291,78 @@
 /* Begin PBXTargetDependency section */
 		797980961EB91A6E00D44AB0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 797980891EB91A6E00D44AB0 /* MulticastDelegate */;
+			target = 797980891EB91A6E00D44AB0 /* MulticastDelegate (iOS) */;
 			targetProxy = 797980951EB91A6E00D44AB0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		6DF53B7C207D451700EE395D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.catigbe.utils.MulticastDelegate;
+				PRODUCT_NAME = MulticastDelegate;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Debug;
+		};
+		6DF53B7D207D451700EE395D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.catigbe.utils.MulticastDelegate;
+				PRODUCT_NAME = MulticastDelegate;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Release;
+		};
 		7979809C1EB91A6E00D44AB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -282,13 +405,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -330,11 +454,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -354,7 +479,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.catigbe.utils.MulticastDelegate;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MulticastDelegate;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
@@ -375,7 +500,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.catigbe.utils.MulticastDelegate;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MulticastDelegate;
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
@@ -411,6 +536,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6DF53B7B207D451700EE395D /* Build configuration list for PBXNativeTarget "MulticastDelegate (tvOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DF53B7C207D451700EE395D /* Debug */,
+				6DF53B7D207D451700EE395D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		797980841EB91A6E00D44AB0 /* Build configuration list for PBXProject "MulticastDelegate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -420,7 +554,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7979809E1EB91A6E00D44AB0 /* Build configuration list for PBXNativeTarget "MulticastDelegate" */ = {
+		7979809E1EB91A6E00D44AB0 /* Build configuration list for PBXNativeTarget "MulticastDelegate (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7979809F1EB91A6E00D44AB0 /* Debug */,
