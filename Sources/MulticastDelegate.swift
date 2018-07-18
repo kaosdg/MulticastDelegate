@@ -79,7 +79,8 @@ public class MulticastDelegate<T> {
      - parameter left: The instance of `MulticastDelegate` that `right` will be added to.
      - parameter right: The delegate, conforming to `T`, that will be added o `left`.
      */
-    static public func +=(left: MulticastDelegate<Delegate>, right: Delegate) {
+    @available(*, deprecated, message: "Will be removed in a future release.  Please use add()")
+    static public func += (left: inout MulticastDelegate<Delegate>, right: Delegate) {
         left.add(right)
     }
     
@@ -88,7 +89,8 @@ public class MulticastDelegate<T> {
      - parameter left: The instance of `MulticastDelegate` that `right` will be removed from.
      - parameter right: The delegate, conforming to `T`, that will be removed from `right`.
      */
-    static public func -=(left: MulticastDelegate<Delegate>, right: Delegate) {
+    @available(*, deprecated, message: "Will be removed in a future release.  Please use remove()")
+    static public func -= ( left: inout MulticastDelegate<Delegate>, right: Delegate) {
         left.remove(right)
     }
 
@@ -115,7 +117,8 @@ public class MulticastDelegate<T> {
          - parameter left: The instance of `MulticastDelegate` that `right` be executed against.
          - parameter right: The invocation closure to be executed.
     */
-    public static func ~>(left: MulticastDelegate<Delegate>, right: (Delegate) -> ()) {
+    @available(*, deprecated, message: "Will be removed in a future release.  Please use invoke()")
+    public static func ~> (left: MulticastDelegate<Delegate>, right: (Delegate) -> ()) {
         left.invoke(right)
     }
     
