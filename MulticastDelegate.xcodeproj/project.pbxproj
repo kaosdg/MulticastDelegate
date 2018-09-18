@@ -14,7 +14,6 @@
 		797980941EB91A6E00D44AB0 /* MulticastDelegate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7979808A1EB91A6E00D44AB0 /* MulticastDelegate.framework */; };
 		7979809B1EB91A6E00D44AB0 /* MulticastDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 7979808D1EB91A6E00D44AB0 /* MulticastDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		797980A51EB91A7E00D44AB0 /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797980A41EB91A7E00D44AB0 /* MulticastDelegate.swift */; };
-		79C1A6D71EC4994E00F31EE7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 79C1A6D31EC4994E00F31EE7 /* Info.plist */; };
 		79C1A6DA1EC49D2F00F31EE7 /* MulticastDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C1A6D61EC4994E00F31EE7 /* MulticastDelegateTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,7 +41,7 @@
 		7979808A1EB91A6E00D44AB0 /* MulticastDelegate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MulticastDelegate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7979808D1EB91A6E00D44AB0 /* MulticastDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MulticastDelegate.h; path = ../Sources/MulticastDelegate.h; sourceTree = "<group>"; };
 		7979808E1EB91A6E00D44AB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		797980931EB91A6E00D44AB0 /* MulticastDelegateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MulticastDelegateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		797980931EB91A6E00D44AB0 /* MulticastDelegateTests (iOS).xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MulticastDelegateTests (iOS).xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		797980A41EB91A7E00D44AB0 /* MulticastDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MulticastDelegate.swift; sourceTree = "<group>"; };
 		79C1A6D31EC4994E00F31EE7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79C1A6D41EC4994E00F31EE7 /* LinuxMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinuxMain.swift; sourceTree = "<group>"; };
@@ -99,7 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				7979808A1EB91A6E00D44AB0 /* MulticastDelegate.framework */,
-				797980931EB91A6E00D44AB0 /* MulticastDelegateTests.xctest */,
+				797980931EB91A6E00D44AB0 /* MulticastDelegateTests (iOS).xctest */,
 				6DF53B76207D451700EE395D /* MulticastDelegate.framework */,
 				790612FC20FF700D00870ADB /* MulticastDelegateTests (tvOS).xctest */,
 			);
@@ -210,9 +209,9 @@
 			productReference = 7979808A1EB91A6E00D44AB0 /* MulticastDelegate.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		797980921EB91A6E00D44AB0 /* MulticastDelegateTests */ = {
+		797980921EB91A6E00D44AB0 /* MulticastDelegateTests (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 797980A11EB91A6E00D44AB0 /* Build configuration list for PBXNativeTarget "MulticastDelegateTests" */;
+			buildConfigurationList = 797980A11EB91A6E00D44AB0 /* Build configuration list for PBXNativeTarget "MulticastDelegateTests (iOS)" */;
 			buildPhases = (
 				7979808F1EB91A6E00D44AB0 /* Sources */,
 				797980901EB91A6E00D44AB0 /* Frameworks */,
@@ -223,9 +222,9 @@
 			dependencies = (
 				797980961EB91A6E00D44AB0 /* PBXTargetDependency */,
 			);
-			name = MulticastDelegateTests;
+			name = "MulticastDelegateTests (iOS)";
 			productName = MulticastDelegateTests;
-			productReference = 797980931EB91A6E00D44AB0 /* MulticastDelegateTests.xctest */;
+			productReference = 797980931EB91A6E00D44AB0 /* MulticastDelegateTests (iOS).xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -240,10 +239,12 @@
 				TargetAttributes = {
 					6DF53B75207D451700EE395D = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 					790612F120FF700D00870ADB = {
 						DevelopmentTeam = M8X8TH4LN3;
+						LastSwiftMigration = 1000;
 					};
 					797980891EB91A6E00D44AB0 = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -272,7 +273,7 @@
 			targets = (
 				797980891EB91A6E00D44AB0 /* MulticastDelegate (iOS) */,
 				6DF53B75207D451700EE395D /* MulticastDelegate (tvOS) */,
-				797980921EB91A6E00D44AB0 /* MulticastDelegateTests */,
+				797980921EB91A6E00D44AB0 /* MulticastDelegateTests (iOS) */,
 				790612F120FF700D00870ADB /* MulticastDelegateTests (tvOS) */,
 			);
 		};
@@ -297,7 +298,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79C1A6D71EC4994E00F31EE7 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,7 +387,6 @@
 				PRODUCT_NAME = MulticastDelegate;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
 			name = Debug;
@@ -420,7 +419,6 @@
 				PRODUCT_NAME = MulticastDelegate;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
 			name = Release;
@@ -435,7 +433,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.catigbe.utils.MulticastDelegate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -449,7 +446,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.catigbe.utils.MulticastDelegate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -509,6 +505,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -564,6 +561,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALIDATE_PRODUCT = YES;
@@ -588,7 +586,6 @@
 				PRODUCT_NAME = MulticastDelegate;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -607,7 +604,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.catigbe.utils.MulticastDelegate;
 				PRODUCT_NAME = MulticastDelegate;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -620,7 +616,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.catigbe.utils.MulticastDelegate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -633,7 +628,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.catigbe.utils.MulticastDelegate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -676,7 +670,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		797980A11EB91A6E00D44AB0 /* Build configuration list for PBXNativeTarget "MulticastDelegateTests" */ = {
+		797980A11EB91A6E00D44AB0 /* Build configuration list for PBXNativeTarget "MulticastDelegateTests (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				797980A21EB91A6E00D44AB0 /* Debug */,
