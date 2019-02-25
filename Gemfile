@@ -6,3 +6,5 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 # gem "rails"
 gem 'danger'
+gem 'danger-the_coding_love'
+gem 'danger-xcov'
